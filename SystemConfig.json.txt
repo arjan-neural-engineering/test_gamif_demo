@@ -1,0 +1,49 @@
+Example SystemConfig.json
+===================================================
+A file based on the template below should be saved at
+climber/config_local/SystemConfig.json
+
+Comments are (unfortunately) not allowed in JSON files
+Backslashes (in Windows paths) must be escaped in json (\\)
+
+server is the message manager address, and must include the port number
+
+main should be the climber location on your PC.
+The other paths (i.e. pExec) should be the path where climber is installed on
+each rig machine
+
+ipNSP#hw is the IP address used to communicate with the Blackrock NSP (not the
+IP of the NSP computer)
+
+The fields defined here can be referenced in the Loader appman.conf files or in modules.
+
+Variables can be added or removed as necessary and are accessible via the
+loadLocalSysConfig.m and loadLocalConfigs.m functions
+===================================================
+{
+    "server": "192.168.1.33:7111",
+    "location": "pitt",
+
+    "main":  "C:\\git\\climber",
+    "pExec": "C:\\git\\climber",
+    "pVR":   "C:\\git\\climber",
+    "pNSP1": "C:\\git\\climber",
+    "pNSP2": "C:\\git\\climber",
+    "pStim": "C:\\git\\climber",
+
+    "ipVR":   "192.168.1.33",
+    "ipNSP1": "192.168.1.33",
+    "ipNSP2": "192.168.1.33",
+    "ipExec": "192.168.1.33",
+    "ipStim": "192.168.1.33",
+    
+    
+    "ipNSP1hw": "192.168.137.1",
+    "ipNSP2hw": "192.168.137.1",
+    "ipAja":   "192.168.110.106",
+    
+    "rPi_ssh": "rnel@192.168.110.108",
+    
+    "QL_DumpDir": "D:\\QuickLoggerDumpFiles",
+    "MujocoDir": "D:\\VR\\mjhaptix140\\program"
+}

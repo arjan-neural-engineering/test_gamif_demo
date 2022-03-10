@@ -1,0 +1,34 @@
+Example ComPortConfig.json
+===================================================
+A file based on the JSON template below should be saved at
+climber/config_local/ComPortConfig.json
+
+Comments are (unfortunately) not allowed in JSON files
+
+This file should contain com port numbers (e.g. "COM3") used to connect to
+various devices (usually via USB). For example "StimWatchdogCOM" is the COM Port
+the StimPC needs to connect to the Stim Watchdog Arduino (in the stim e-stop
+box).
+
+The fields defined here can be referenced in the Loader appman.conf files or in modules.
+
+Variables can be added or removed as necessary and are accessible via the
+loadLocalComPortConfig.m and loadLocalConfigs.m functions
+===================================================
+{
+    "StimWatchdogCOM": "COM5",
+    
+    "PrensiliaCOM": "COM4",
+    "SingTactArduinoCOM": "COM4", 
+    
+    "ForcePlatformCOM1": "COM16",
+    "ForcePlatformCOM2": "COM15",
+    "ForcePlatformCOM3": "COM17",
+
+    "BrainBoardDisplayCOM": "COM5",
+
+    "PaletteCOM": "COM3",
+    "GlorehaCOM": "COM4",
+    "OpenHandGripperCOM": "COM4",
+    "LedTargetArduinoCOM": "COM4"
+}
